@@ -12,3 +12,10 @@ Coming soon.... Mostly GUI Now.
 
 ![Image](BrainlessIDE.gif)
 
+
+# Render Problem
+Can reduce the impact by setting white background still rendering is slow.
+
+
+
+![Image](RenderProblem.gif)
