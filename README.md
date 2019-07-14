@@ -4,5 +4,11 @@ An attempt to learn IDE(maybe editor if I lose interest) development using JavaF
 # Requirement
 OpenJDK 12, OpenJFX 12 SDK
 
-Coming soon....
+# Setup Information
+https://openjfx.io/openjfx-docs/
+
+
+Coming soon.... Mostly GUI Now.
+
+![](Brainless.gif)
 
