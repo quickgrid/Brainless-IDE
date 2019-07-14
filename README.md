@@ -10,5 +10,5 @@ https://openjfx.io/openjfx-docs/
 
 Coming soon.... Mostly GUI Now.
 
-![](Brainless.gif)
+![Image](BrainlessIDE.gif)
 
