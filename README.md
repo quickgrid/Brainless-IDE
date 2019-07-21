@@ -47,8 +47,11 @@ https://openjfx.io/openjfx-docs/
 
 Coming soon.... Mostly GUI Now.
 
+---
 
 ![Image](BrainlessIDE_3.gif)
+
+---
 
 ![Image](BrainlessIDE.gif)
 
