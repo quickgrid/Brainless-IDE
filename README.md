@@ -1,6 +1,19 @@
 # Brainless-IDE
 An attempt to learn IDE(maybe editor if I lose interest) development using JavaFX, Javascript, HTML, CSS and inspired by Intellij GUI.
 
+## Status:
+Incomplete.
+
+# Features:
+Not many features just an attempt to mimick intellij community gui. Most of the GUI objects are created on fxml instead of java class so they need to be changed to add more functionality. This mostly an example starting point for creating a funcitonal program in java.
+
+1. It uses ace editor for for code editing related tasks.
+2. JavaFx and Swing with SwingNode for GUI.
+3. JavaCompiler to compile code to java class.
+4. ProcessBuilder to run the class file and get the output.
+5. JavaFx WebView executeScript to communicate from javascript to java.
+
+
 # Requirement:
 1. Openjfx 12+ SDK from, https://gluonhq.com/products/javafx/
 2. OpenJDK 12+
