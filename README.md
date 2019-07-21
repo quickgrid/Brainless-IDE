@@ -8,6 +8,9 @@ An attempt to learn IDE(maybe editor if I lose interest) development using JavaF
 2. Remove fxml view and replace with equivalent java code to dynamically update UI.
 3. Ace Editor can be replaced with following 2 libraries. These examples can be included here with least effort, but the codes must be modified heavily to bring expected features and editor UI design.
 https://github.com/quickgrid/JavaFx-RichTextFx-RSyntaxTextArea-Example 
+4. Splash screen to preload necessary resources.
+5. GUIs for each windows such as: preferences, run results, debugging etc.
+6. Handle copy paste from ace editor to os and vice versa.
 
 
 
