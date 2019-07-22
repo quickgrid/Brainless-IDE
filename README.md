@@ -10,7 +10,7 @@ An attempt to learn IDE(maybe editor if I lose interest) development using JavaF
 https://github.com/quickgrid/JavaFx-RichTextFx-RSyntaxTextArea-Example 
 4. Splash screen to preload necessary resources.
 5. GUIs for each windows such as: preferences, run results, debugging etc.
-6. ~~Handle copy paste from ace editor to os and vice versa.~~
+6. Handle keyboard cut paste.
 7. Add support for compiling python, c, c++ etc.
 8. Fix file tree to handle new files.
 9. Create new tabs on double click or File > Select New.
