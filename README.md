@@ -4,8 +4,8 @@ An attempt to learn IDE(maybe reference code example if I lose interest) develop
 ### Status: Incomplete
 
 # TODO:
-1. Add threading
-2. **Remove fxml view and replace with equivalent java code to dynamically update UI.**
+1. Add threading.
+2. **Remove fxml view and replace with equivalent java classes to dynamically update UI.**
 3. Ace Editor can be replaced with following 2 libraries. These examples can be included here with least effort, but the codes must be modified heavily to bring expected features and editor UI design.
 https://github.com/quickgrid/JavaFx-RichTextFx-RSyntaxTextArea-Example 
 4. Splash screen to preload necessary resources.
@@ -23,7 +23,7 @@ Not many features just an attempt to mimick intellij community gui. Most of the 
 
 1. It uses ace editor for for code editing related tasks.
 2. JavaFx and Swing with SwingNode for GUI.
-3. JavaCompiler to compile code to java class.
+3. JavaCompiler to compile code to java class. (use ProcessBuilder instead)
 4. ProcessBuilder to run the class file and get the output.
 5. JavaFx WebView executeScript to communicate from javascript to java.
 
@@ -45,7 +45,26 @@ Not many features just an attempt to mimick intellij community gui. Most of the 
 https://openjfx.io/openjfx-docs/
 
 
-Coming soon.... Mostly GUI Now.
+### Update 24-7-2019
+Adding more features without creating classes for each component will make it impossible to navigate. The whole project needs to be cleaned and start over with copy pasting existing code where necessary. A lot of unnecessary codes can be changed to better ones but left there as example. I will not further update this spaghetti code.
+
+#### Screenshot 1:
+
+![Image](BrainlessIDE_4.gif)
+
+#### Screenshot 2:
+
+![Image](BrainlessIDE_7.gif)
+
+#### Screenshot 3:
+
+![Image](BrainlessIDE_8.gif)
+
+#### Screenshot 4:
+
+![Image](BrainlessIDE_9.gif)
+
+
 
 ### Update 22-7-2019
 
