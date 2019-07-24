@@ -1,11 +1,11 @@
 # Brainless-IDE
-An attempt to learn IDE(maybe editor if I lose interest) development using JavaFX, Javascript, HTML, CSS and inspired by Intellij GUI.
+An attempt to learn IDE(maybe reference code example if I lose interest) development using JavaFX, Javascript, HTML, CSS and inspired by Intellij GUI.
 
 ### Status: Incomplete
 
 # TODO:
 1. Add threading
-2. Remove fxml view and replace with equivalent java code to dynamically update UI.
+2. **Remove fxml view and replace with equivalent java code to dynamically update UI.**
 3. Ace Editor can be replaced with following 2 libraries. These examples can be included here with least effort, but the codes must be modified heavily to bring expected features and editor UI design.
 https://github.com/quickgrid/JavaFx-RichTextFx-RSyntaxTextArea-Example 
 4. Splash screen to preload necessary resources.
