@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ACE in Action</title>
+    <style type="text/css" media="screen">
+    #editor {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+
+    /* change breakpoint style */
+    .ace_gutter-cell.ace_breakpoint{
+        //border-radius: 0% 50% 50% 0%;
+        box-shadow: 0em 1em 1em 0em #c0fc0f inset;
+
+      //border-left: 0.5em solid red;
+    }
+
+
+    /* change horizontal scroll line bar shadow */
+
+    .ace_scroller.ace_scroll-left {
+        box-shadow: initial!important;
+    }
+
+
+
+</style>
+</head>
+<body>
+<h2>Edit code</h2>
+<div id="editor">public class BrainLessIDE {
+    public static void main(String [] args){
+        System.out.println("Hello Brain");
+    }
+}
+</div>
+
+<script src="../Editor/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="../Editor/src-noconflict/ext-language_tools.js"></script>
+<script>
+    var editor = ace.edit("editor");
+    editor.getSession().setMode("ace/mode/java");
+
+
+   editor.setOptions({
+        fontFamily: "Monospaced",
+        fontSize: "10pt",
+        enableBasicAutocompletion: true,
+        enableSnippets: true,
+        enableLiveAutocompletion: true
+    });
+    editor.setShowPrintMargin(false);
+    //editor.setScrollSpeed(0.05);
+
+
+    var JAVA_READ_TEST = "READING VALUE FROM JS VAR INTO JAVA";
+
+
+
+
+
+
+    var MEMBER;
+    function pasteFunction() {
+        editor.onPaste(MEMBER);
+    }
+
+
+    editor.on("cut", function() {
+        //MEMBER = editor.getSelectedText();
+        //alert(editor.getSelectedText());
+    });
+    editor.on("copy", function() {
+        sendToJava(editor.getSelectedText());
+        alert(":copy ALPHA");
+    });
+    editor.on("paste", function() {
+
+        //alert(":PasteEvent");
+    });
+
+
+
+    function cutFunc(){
+         var range = editor.getSelectionRange();
+            cursor = editor.session.remove(range);
+            editor.clearSelection();
+    }
+
+
+
+
+
+
+    var jsConnector = {
+        showResult: function (result) {
+
+          },
+            changeFontSize: function (value){
+                editor.setOptions({
+                    fontSize: value,
+                });
+           },
+           valueReturnTest: function (value){
+                   return "RUNNING CODE";
+           }
+    }
+    function getJsConnector() {
+        alert("WORKING");
+        return jsConnector;
+    }
+
+
+
+
+
+    function sendToJava() {
+        var s = editor.getSelectedText();
+        javaConnector.getValueFromJavascript(s);
+    }
+
+
+
+
+
+
+
+
+
+
+    ace.require("ace/ext/language_tools");
+
+
+
+
+
+
+
+// Break point management with event
+/**
+ * TODO: Move break point with code
+ */
+editor.on("gutterclick", function(e) {
+    var target = e.domEvent.target;
+    if (target.className.indexOf("ace_gutter-cell") == -1)
+        return;
+    if (!editor.isFocused())
+        return;
+    if (e.clientX > 25 + target.getBoundingClientRect().left)
+        return;
+
+
+
+    var breakpoints = e.editor.session.getBreakpoints(row, 0);
+    var row = e.getDocumentPosition().row;
+    if (typeof breakpoints[row] === typeof undefined)
+        e.editor.session.setBreakpoint(row);
+    else
+        e.editor.session.clearBreakpoint(row);
+
+});
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

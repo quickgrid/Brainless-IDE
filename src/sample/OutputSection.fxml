@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.web.WebView?>
+
+<HBox fx:id="output_section_window" prefHeight="300.0" prefWidth="800.0" stylesheets="@Main3.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <VBox>
+         <children>
+            <Button disable="true" mnemonicParsing="false" text="Run:" />
+            <HBox>
+               <children>
+                  <ToolBar orientation="VERTICAL">
+                    <items>
+                        <Group>
+                           <children>
+                            <Button mnemonicParsing="false" rotate="-90.0">
+                                 <graphic>
+                                    <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/folder_plus_fill.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                           </children>
+                        </Group>
+                        <Group>
+                           <children>
+                              <Button mnemonicParsing="false" rotate="-90.0">
+                                 <graphic>
+                                    <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/directory_arrow_down_1.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                           </children>
+                        </Group>
+                        <Group>
+                           <children>
+                              <Button mnemonicParsing="false" rotate="-90.0">
+                                 <graphic>
+                                    <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                                       <image>
+                                          <Image url="@resources/text_distribution.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic></Button>
+                           </children>
+                        </Group>
+                    </items>
+                  </ToolBar>
+                  <ToolBar orientation="VERTICAL">
+                     <items>
+                        <Group>
+                           <children>
+                              <Button mnemonicParsing="false" rotate="-90.0">
+                                 <graphic>
+                                    <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/arrow_file_bar.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </Group>
+                        <Group>
+                           <children>
+                              <Button mnemonicParsing="false" rotate="-90.0">
+                                 <graphic>
+                                    <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@resources/imagesBottomLeft.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </Group>
+                        <Group>
+                           <children>
+                              <Button mnemonicParsing="false" rotate="-90.0">
+                                 <graphic>
+                                    <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                                       <image>
+                                          <Image url="@resources/play.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </Group>
+                     </items>
+                  </ToolBar>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="ALL_TABS" HBox.hgrow="ALWAYS">
+        <tabs>
+          <Tab text="Untitled">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <WebView fx:id="run_output" minHeight="-1.0" minWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Untitled Tab 2">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</HBox>

@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.WebView?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" stylesheets="@Main.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.old.Main2Controller">
+    <children>
+        <MenuBar fx:id="main_menu_bar" VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" text="File">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="New" />
+                        <MenuItem fx:id="menu_open_button" mnemonicParsing="false" onAction="#openFileChooser" text="Open…" />
+                        <Menu mnemonicParsing="false" text="Open Recent" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                        <MenuItem mnemonicParsing="false" text="Save" />
+                        <MenuItem mnemonicParsing="false" text="Save As…" />
+                        <MenuItem mnemonicParsing="false" text="Revert" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Preferences…" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Quit" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edit">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Undo" />
+                        <MenuItem mnemonicParsing="false" text="Redo" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Cut" />
+                        <MenuItem mnemonicParsing="false" text="Copy" />
+                        <MenuItem mnemonicParsing="false" text="Paste" />
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" text="Select All" />
+                        <MenuItem mnemonicParsing="false" text="Unselect All" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem fx:id="menu_item_about" mnemonicParsing="false" onAction="#showAboutMenu" text="About MyHelloApp" />
+                    </items>
+                </Menu>
+            </menus>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="-1.0" left="-1.0" right="-1.0" top="-1.0" />
+         </padding>
+        </MenuBar>
+      <HBox prefHeight="18.0" prefWidth="900.0">
+         <children>
+            <ToolBar fx:id="bottom_status_bar_111" style="-fx-background-color: #F2F2F2;" HBox.hgrow="ALWAYS">
+               <items>
+                  <HBox>
+                     <children>
+                        <Button fx:id="left_side_bar_project_button12" focusTraversable="false" mnemonicParsing="false" text="Untitled">
+                           <graphic>
+                              <ImageView fitHeight="13.0" fitWidth="13.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/folder_plus_fill.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Show Projects" />
+                           </tooltip>
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button disable="true" mnemonicParsing="false">
+                           <graphic>
+                              <ImageView fitHeight="15.0" fitWidth="15.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="180.0">
+                                 <image>
+                                    <Image url="@../resources/arrow_file_bar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="8.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </HBox>
+               </items>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ToolBar>
+            <ToolBar fx:id="bottom_status_bar_1111" layoutX="666.0" layoutY="10.0" style="-fx-background-color: #F2F2F2;">
+               <items>
+                  <HBox spacing="16.0">
+                     <children>
+                        <Button fx:id="left_side_bar_project_button121" focusTraversable="false" mnemonicParsing="false">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="13.0" fitWidth="13.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/arrow_left.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Show Projects" />
+                           </tooltip>
+                           <HBox.margin>
+                              <Insets top="2.0" />
+                           </HBox.margin>
+                        </Button>
+                        <MenuButton fx:id="code_config_button" mnemonicParsing="false" style="-fx-background-color: E3E3E3;" text="MenuButton">
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Action 1">
+                                 <graphic>
+                                    <ImageView fitHeight="10.0" fitWidth="10.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/lock_close.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false" text="Action 2" />
+                           </items>
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="1.0" />
+                           </HBox.margin>
+                        </MenuButton>
+                        <Separator orientation="VERTICAL" />
+                        <Group>
+                           <children>
+                              <Button fx:id="play_button" focusTraversable="false" mnemonicParsing="false" onAction="#runCode">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="13.0" fitWidth="13.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/play.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Show Projects" />
+                                 </tooltip>
+                              </Button>
+                              <Button fx:id="left_side_bar_project_button111" focusTraversable="false" layoutX="41.600006103515625" mnemonicParsing="false">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="13.0" fitWidth="13.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../resources/search_left.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <tooltip>
+                                    <Tooltip text="Show Projects" />
+                                 </tooltip>
+                              </Button>
+                           </children>
+                           <HBox.margin>
+                              <Insets right="10.0" top="2.0" />
+                           </HBox.margin>
+                        </Group>
+                     </children>
+                  </HBox>
+               </items>
+            </ToolBar>
+         </children>
+      </HBox>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+         <left>
+            <ToolBar fx:id="left_side_bar" orientation="VERTICAL" BorderPane.alignment="CENTER">
+               <items>
+                  <Group>
+                     <children>
+                        <Button fx:id="left_side_bar_project_button" focusTraversable="false" layoutY="51.999999046325684" mnemonicParsing="false" rotate="-90.0" text="Project">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="10.0" fitWidth="10.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                                 <image>
+                                    <Image url="@../resources/folderfill.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <tooltip>
+                              <Tooltip text="Show Projects" />
+                           </tooltip>
+                        </Button>
+                     </children>
+                  </Group>
+               </items>
+            </ToolBar>
+         </left>
+         <right>
+            <ToolBar fx:id="right_side_bar" orientation="VERTICAL" prefWidth="10.0" BorderPane.alignment="CENTER">
+               <items>
+                  <Group>
+                     <children>
+                        <Button layoutX="26.59999942779541" mnemonicParsing="false" rotate="90.0" text="Bugs">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="12.0" fitWidth="12.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+                                 <image>
+                                    <Image url="@../resources/bug_spider.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Group>
+               </items>
+            </ToolBar>
+         </right>
+         <center>
+            <SplitPane dividerPositions="0.3" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="100.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                            <VBox focusTraversable="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                <children>
+                                    <ToolBar fx:id="projects_tool_bar">
+                                        <items>
+                                            <Button mnemonicParsing="false" text="Projects" textAlignment="CENTER">
+                                                <font>
+                                                    <Font size="10.0" />
+                                                </font>
+                                            </Button>
+                                        </items>
+                                    </ToolBar>
+                                    <TreeView fx:id="file_tree" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                                </children>
+                            </VBox>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                                  <TabPane fx:id="editor_tab_pane" tabClosingPolicy="ALL_TABS" tabMinWidth="70.0" VBox.vgrow="ALWAYS">
+                                      <tabs>
+                                          <Tab style="-fx-border-color: #9B9B9B #9B9B9B #fff transparent;" text="Untitled">
+                                              <content>
+                                                  <AnchorPane style="-fx-background-color: #fff;">
+                                                      <children>
+                                                <WebView fx:id="code_editor" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                                                      </children>
+                                          </AnchorPane>
+                                              </content>
+                                          </Tab>
+                                      </tabs>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                  </TabPane>
+                              <ToolBar fx:id="bottom_menu_bar" prefHeight="20.0">
+                                 <items>
+                                    <Button fx:id="function_indicator" mnemonicParsing="false" text="Functions">
+                                       <font>
+                                          <Font size="10.0" />
+                                       </font>
+                                    </Button>
+                                 </items>
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </ToolBar>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+      </BorderPane>
+      <HBox>
+         <children>
+              <ToolBar fx:id="bottom_status_bar_2" HBox.hgrow="ALWAYS">
+                  <items>
+                  <Button mnemonicParsing="false" text="Run">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="12.0" fitWidth="12.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/play.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                      <Button mnemonicParsing="false" text="TODO">
+                          <font>
+                              <Font size="11.0" />
+                          </font>
+                     <graphic>
+                        <ImageView fitHeight="13.0" fitWidth="13.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/text_distribution.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                      </Button>
+                  </items>
+              </ToolBar>
+         </children>
+      </HBox>
+      <HBox>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <children>
+              <ToolBar fx:id="bottom_status_bar_1" style="-fx-background-color: #F2F2F2;" HBox.hgrow="SOMETIMES">
+                  <items>
+                  <Label rotate="180.0">
+                     <graphic>
+                        <ImageView fitHeight="10.0" fitWidth="10.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../resources/imagesBottomLeft.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="5.0" right="5.0" />
+                     </padding>
+                  </Label>
+                  <Label text="Status">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  </items>
+              </ToolBar>
+            <ToolBar fx:id="bottom_status_bar_11" style="-fx-background-color: #F2F2F2;">
+               <items>
+                  <HBox spacing="10.0">
+                     <children>
+                        <Label contentDisplay="RIGHT" text="0:0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="10.0" fitWidth="20.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="-45.0">
+                                 <image>
+                                    <Image url="@../resources/arrow_up_down.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <Label contentDisplay="RIGHT" text="CRLF">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="10.0" fitWidth="10.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="-45.0">
+                                 <image>
+                                    <Image url="@../resources/arrow_up_down.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <Label contentDisplay="RIGHT" text="4 Spaces">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="10.0" fitWidth="10.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="-45.0">
+                                 <image>
+                                    <Image url="@../resources/arrow_up_down.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <Label contentDisplay="RIGHT" text="Utf-8">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="10.0" fitWidth="10.0" opacity="0.5" pickOnBounds="true" preserveRatio="true" rotate="-45.0">
+                                 <image>
+                                    <Image url="@../resources/arrow_up_down.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
+                        <Label contentDisplay="RIGHT">
+                           <graphic>
+                              <ImageView fitHeight="10.0" fitWidth="10.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/lock_open.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label contentDisplay="RIGHT">
+                           <graphic>
+                              <ImageView fitHeight="10.0" fitWidth="10.0" opacity="0.5" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../resources/center_object.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="5.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                  </HBox>
+               </items>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </ToolBar>
+         </children>
+      </HBox>
+    </children>
+</VBox>
