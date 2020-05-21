@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+
 # Brainless-IDE
 An attempt to learn IDE(maybe reference code example if I lose interest) development using JavaFX, Javascript, HTML, CSS and inspired by Intellij GUI.
 
